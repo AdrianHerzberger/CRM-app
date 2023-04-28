@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "simplecrm-1788c": {
+      "hosting": {
+        "CRM-app": [
+          "simplecrm-1788c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "simplecrm-1788c"
+  }
+}

@@ -1,0 +1,33 @@
+<form class="dialog-login">
+    <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+    <h1 mat-dialog-title>Create a User</h1>
+    <div mat-dialog-content>
+        <div>
+            <mat-form-field class="mr-16" appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input [disabled]="loading" [(ngModel)]="user.firstName" name="firstName" matInput
+                    placeholder="First Name">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="mr-16" appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input [disabled]="loading" [(ngModel)]="user.lastName" name="lastName" matInput
+                    placeholder="Last Name">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="mr-16" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input [disabled]="loading" [(ngModel)]="user.email" name="Email" matInput
+                    placeholder="Email">
+            </mat-form-field>
+        </div>
+        <div mat-dialog-actions>
+            <button [disabled]="loading" (click)="clear()" mat-button>Clear</button>
+            <button [disabled]="loading" mat-raised-button color="primary" (click)="submit()"
+                cdkFocusInitial>Submit</button>
+            <span *ngIf="show"> <button mat-button color="accent">Login success !!</button></span>
+        </div>
+    </div>
+</form>
